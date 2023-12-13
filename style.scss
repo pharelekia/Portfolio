@@ -1,0 +1,319 @@
+@mixin btn-propriete($width,$height,$background-color){
+    width: $width;
+    height: $height;
+    background-color: $background-color;
+};
+
+@mixin color-deg-text{
+    background-image: linear-gradient(to right,#00F260,#0575E6);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+};
+@mixin color-border{
+    border-image: linear-gradient(to right,#00F260,#0575E6);
+    border-image-slice: 1;
+};
+@mixin input-propriete{
+    background-color: transparent;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+};
+@mixin techno {
+    width: 150px;
+    height: 65px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 22px;
+    text-transform: uppercase;
+    font-size: 14px;
+};
+@mixin flex-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+@mixin ligne-horiz{
+    display: inline-block;
+    width: 80px;
+    height: 4px;
+    background-color: gray;
+    margin-left: 10px;
+};
+@mixin titre-h2{
+    text-align: center;
+    font-size: 1em;
+    color: gray;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1d1c1d;    
+}
+.section-profil{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: #fff;
+        font-size: 2.3em;
+    }
+    p{
+        color: gray;
+        font-size: 1.3em;
+    }
+    .btn-telecharger{
+        @include color-border;
+        @include btn-propriete(200px,40px,transparent);
+        margin-top: 20px;
+        cursor: pointer;
+        @include color-deg-text;
+        font-size: 14px;
+    }
+    .btn-contact-moi{
+        @include btn-propriete(130px,40px,transparent);
+        @include color-border;
+        background-image: linear-gradient(to right,#00F260,#0575E6);
+        margin-left: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+        color: rgb(55, 55, 55);
+        font-weight: 700;
+        font-size: 14px;
+    }
+    img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    div{
+        margin-right: 50px;
+    }
+}
+.portfolio{
+    width: 100%;
+    height: 100vh;
+    background-color: #1f1f1f;
+    & h2{
+        @include titre-h2;
+        padding-top: 50px;
+        span{
+           @include ligne-horiz;
+        }
+    }
+    .realisation{
+        text-align: center;
+        @include color-deg-text;
+        font-size: 1.3em;
+    }
+    .mes-projets{
+        margin-top: 7vh;
+        .p-1, .p-2{
+            @include flex-box;
+        }
+        .p-2{
+            margin-top: 15px;
+        }
+
+        .premier-projet{
+            position: relative;
+            margin: 0 10px;
+            &:hover .contenu{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            img{
+                width: 380px;
+                height: 250px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            .contenu{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(14, 14, 14, 0.9);
+                color: white;
+                opacity: 0;
+                transition: 0.5s;
+                transform: translateY(10px);
+                @include flex-box;
+                cursor: pointer;
+                p{
+                    border: 1px solid #fff;
+                    border-radius: 50px;
+                    width: 100px;
+                    height: 35px;
+                    margin: 0 5px;
+                    padding-top: 7px;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+    
+}
+.competences{
+    height: 60vh;
+    & h2{
+        @include titre-h2;
+        margin-top: 80px;
+        span{
+            @include ligne-horiz;
+        }
+    }
+    .mes-outils{
+        text-align: center;
+        @include color-deg-text;
+        font-size: 1.3em;
+    }
+    .mes-technologies{
+        &-1{
+            display: flex;
+            justify-content: center;
+            p{
+                @include techno;
+                margin: 50px 20px;
+                background-color: #303133;
+                color: white;
+            }
+        }
+        &-2{
+            display: flex;
+            justify-content: center;
+            p{
+                @include techno;
+                margin: 0 20px;
+                background-color: #303133;
+                color: white
+            }
+        }
+    }
+}
+.suis-je{
+    color: white;
+    width: 35vh;
+    margin: auto;
+    margin-top: 30vh;
+    &-titre{
+        @include color-deg-text;
+        font-size: 1.3em;
+    }
+    &-parag{
+        font-size: 14px;
+    }
+    h2{
+        @include titre-h2;
+        text-align: center;
+        span{
+            @include ligne-horiz;
+        }
+    }
+    p{
+        text-align: center;
+    }
+    div{
+        text-align: center;
+    }
+
+}
+.skills{
+    width: 100%;
+    height: 50vh;
+    margin-top: 30vh;
+    h1{
+        text-align: center;
+        @include color-deg-text;
+        font-size: 1.3em;
+    }
+    div{
+        width: 100vh;
+        height: 15vh;
+        margin: auto;
+        color: #fff;
+        border: 1px solid #303133;
+        margin-top: 50px;
+        background-color: #303133;
+        p{
+            margin-left: 20px;
+            font-size: 14px;
+        }
+    }
+}
+.contacter{
+    height: 65vh;
+    margin-top: 50vh;
+    padding-top: 50px;
+    h2{
+        @include titre-h2;
+        span{
+            @include ligne-horiz;
+        }
+    }
+    p{
+        text-align: center;
+        font-size: 1.3em;
+        @include color-deg-text;
+    }
+    form{
+        margin-left: 65vh;
+       input{
+        color: gray;
+        width: 80vh;
+        height: 40px;
+        margin: 10px 0;
+        @include input-propriete;
+        transition: 0.5s;
+        &:focus{
+            border-bottom: 1px solid #fff;
+        }
+       }
+       textarea{
+        width: 80vh;
+        height: 20vh;
+        @include input-propriete;
+        color: gray;
+        transition: 0.5s;
+        &:focus{
+            border-bottom: 1px solid #fff;
+        }
+       }
+       .btn-envoyer{
+        @include btn-propriete(590px,50px,transparent);
+        @include color-border;
+        background-image: linear-gradient(to right,#00F260,#0575E6);
+        margin-top: 50px;
+        color: rgb(55, 55, 55);
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+       }
+    }
+}
+.mes-coord{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    height: 20vh;
+    h2{
+        color: #fff;
+        font-size: 1em;
+    }
+    p{
+        color: gray;
+        font-size: 14px;
+    }
+}
