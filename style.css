@@ -33,11 +33,14 @@ body {
   background-color: transparent;
   margin-top: 20px;
   cursor: pointer;
+  font-size: 14px;
+}
+.section-profil .btn-telecharger a {
+  text-decoration: none;
   background-image: linear-gradient(to right, #00F260, #0575E6);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  font-size: 14px;
 }
 .section-profil .btn-contact-moi {
   width: 130px;
@@ -50,9 +53,12 @@ body {
   margin-left: 10px;
   margin-top: 20px;
   cursor: pointer;
-  color: rgb(55, 55, 55);
   font-weight: 700;
   font-size: 14px;
+}
+.section-profil .btn-contact-moi a {
+  text-decoration: none;
+  color: rgb(55, 55, 55);
 }
 .section-profil img {
   width: 300px;

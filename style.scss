@@ -73,21 +73,27 @@ body{
         font-size: 1.3em;
     }
     .btn-telecharger{
+        a{
+            text-decoration: none;
+            @include color-deg-text;
+        }
         @include color-border;
         @include btn-propriete(200px,40px,transparent);
         margin-top: 20px;
         cursor: pointer;
-        @include color-deg-text;
         font-size: 14px;
     }
     .btn-contact-moi{
+        a{
+            text-decoration: none;
+            color: rgb(55, 55, 55);
+        }
         @include btn-propriete(130px,40px,transparent);
         @include color-border;
         background-image: linear-gradient(to right,#00F260,#0575E6);
         margin-left: 10px;
         margin-top: 20px;
         cursor: pointer;
-        color: rgb(55, 55, 55);
         font-weight: 700;
         font-size: 14px;
     }
