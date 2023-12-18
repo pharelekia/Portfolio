@@ -323,3 +323,50 @@ body{
         font-size: 14px;
     }
 }
+
+// Les media query
+@media screen and (max-width: 1080px){
+    .contacter{
+        form{
+            margin-left: 35vh;
+        }
+    }
+}
+@media screen and (max-width: 860px){
+    .contacter{
+        form{
+            margin-left: 15vh;
+        }
+    }
+}
+@media screen and (max-width: 760px){
+    .section-profil{
+        flex-direction: column-reverse;
+    }
+    .portfolio{
+        height: 180vh;
+        .mes-projets{
+            .p-1, .p-2{
+                flex-direction: column;
+            }
+            .premier-projet{
+                margin: 10px 0;
+            }
+        }
+    }
+    .skills{
+        div{
+            width: 80vh;
+        }
+    }
+    .contacter{
+        form{
+            margin-left: 10vh;
+        }
+    }
+    .section-profil{
+        div{
+            margin-right: -10px;
+        }
+    }
+}
