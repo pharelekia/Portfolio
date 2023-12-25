@@ -370,3 +370,73 @@ body{
         }
     }
 }
+@media screen and (max-width: 660px){
+    .contacter{
+        form{
+            input{
+                width: 65vh;
+            }
+            textarea{
+                width: 65vh;
+            }
+            .btn-envoyer{
+                @include btn-propriete(480px,50px,transparent);
+            }
+        }
+    }
+    .skills{
+        div{
+            width: 65vh;
+        }
+    }
+}
+@media screen and (max-width: 660px){
+    .contacter{
+        form{
+            input{
+                width: 55vh;
+            }
+            textarea{
+                width: 55vh;
+            }
+            .btn-envoyer{
+                @include btn-propriete(409px,50px,transparent);
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .contacter{
+        form{
+            input{
+                width: 45vh;
+            }
+            textarea{
+                width: 45vh;
+            }
+            .btn-envoyer{
+                @include btn-propriete(340px,50px,transparent);
+            }
+        }
+    }
+    .mes-coord{
+        h2{
+            font-size: 0.8em;
+        }
+        p{
+            font-size: 10px;
+        }
+    }
+    .skills{
+        div{
+            width: 50vh;
+        }
+    }
+}
+@media screen and (max-width: 428px){
+    .contacter{
+        form{
+            margin-left: 5vh;
+        }
+    }
+}

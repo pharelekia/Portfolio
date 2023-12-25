@@ -390,4 +390,60 @@ body {
   .section-profil div {
     margin-right: -10px;
   }
+}
+@media screen and (max-width: 660px) {
+  .contacter form input {
+    width: 65vh;
+  }
+  .contacter form textarea {
+    width: 65vh;
+  }
+  .contacter form .btn-envoyer {
+    width: 480px;
+    height: 50px;
+    background-color: transparent;
+  }
+  .skills div {
+    width: 65vh;
+  }
+}
+@media screen and (max-width: 660px) {
+  .contacter form input {
+    width: 55vh;
+  }
+  .contacter form textarea {
+    width: 55vh;
+  }
+  .contacter form .btn-envoyer {
+    width: 409px;
+    height: 50px;
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contacter form input {
+    width: 45vh;
+  }
+  .contacter form textarea {
+    width: 45vh;
+  }
+  .contacter form .btn-envoyer {
+    width: 340px;
+    height: 50px;
+    background-color: transparent;
+  }
+  .mes-coord h2 {
+    font-size: 0.8em;
+  }
+  .mes-coord p {
+    font-size: 10px;
+  }
+  .skills div {
+    width: 50vh;
+  }
+}
+@media screen and (max-width: 428px) {
+  .contacter form {
+    margin-left: 5vh;
+  }
 }/*# sourceMappingURL=style.css.map */
